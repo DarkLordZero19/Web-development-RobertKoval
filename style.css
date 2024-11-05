@@ -111,6 +111,19 @@ padding: 0;
 margin-bottom: 10px;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery__item {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Стили для подвала */
 .footer {
 background-color: #0077b6;
