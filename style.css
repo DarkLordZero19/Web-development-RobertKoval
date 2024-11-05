@@ -14,39 +14,17 @@ body {
     color: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 nav {
     align-items: center;
 }
 
-.header__title {
-    font-size: 32px;
+h1 {
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
-}
-
-.header__nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.header__nav-item {
-    margin: 0 10px;
-}
-
-.header__nav-link {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.header__nav-link:hover {
-    background-color: #005a8e;
 }
 
 nav a {
