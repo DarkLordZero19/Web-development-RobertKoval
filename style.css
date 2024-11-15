@@ -154,6 +154,27 @@ nav a:hover {
     background-color: #f5f5f5;
 }
 
+/* Стили для блока pre */
+pre {
+    background-color: #f4f4f4; /* Фоновый цвет блока pre */
+    border: 1px solid #ddd; /* Рамка вокруг блока */
+    border-radius: 5px; /* Закругление углов блока */
+    padding: 15px; /* Внутренние отступы */
+    overflow-x: auto; /* Поддержка горизонтальной прокрутки при необходимости */
+    font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт для кода */
+    white-space: pre-wrap; /* Поддержка переноса строк внутри блока */
+}
+
+/* Стили для абзацев */
+p {
+    margin-bottom: 20px; /* Отступы снизу для абзацев */
+    line-height: 1.6; /* Увеличенный межстрочный интервал для лучшей читаемости */
+}
+
+var {
+    font-weight: bold; /* Выделение переменных жирным шрифтом */
+}
+
 /* Стили для подвала */
 .footer {
     background-color: #0077b6;
