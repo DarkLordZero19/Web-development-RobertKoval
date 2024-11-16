@@ -65,6 +65,7 @@ nav a:hover {
     margin-top: 0;
 }
 
+/* Стили для статей */
 .articles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,6 +127,7 @@ nav a:hover {
     grid-gap: 20px;
 }
 
+/* Стили для галереи */
 .gallery__item {
     width: 100%;
     height: auto;
@@ -139,6 +141,7 @@ nav a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
+/* Стили для таблицы статистики */
 .stats__table {
     width: 100%;
     border-collapse: collapse;
@@ -157,6 +160,27 @@ nav a:hover {
 
 .stats__table tr:nth-child(even) {
     background-color: #f5f5f5;
+}
+
+/* Стили для блока pre */
+pre {
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 15px; 
+    overflow-x: auto; 
+    font-family: 'Courier New', Courier, monospace; 
+    white-space: pre-wrap; 
+}
+
+/* Стили для абзацев */
+p {
+    margin-bottom: 20px; 
+    line-height: 1.6; 
+}
+
+var {
+    font-weight: bold; 
 }
 
 /* Стили для подвала */
@@ -183,6 +207,7 @@ nav a:hover {
     display: none;
 }
 
+/* Стили для других устройств */
 @media screen and (max-width: 768px) {
     .header {
     position: static;}
