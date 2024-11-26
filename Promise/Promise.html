@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="promise.css">
+    <title>Гостевая книга</title>
+</head>
+<body>
+    <div id="preloader" class="preloader">Загрузка...</div>
+    <div id="messagesContainer"></div>
+    <div id="errorContainer" class="error hidden">⚠ Что-то пошло не так.</div>
+
+    <!-- Форма для добавления сообщения -->
+    <form id="messageForm">
+        <input type="text" id="title" placeholder="Заголовок" required>
+        <textarea id="body" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script src="fetchMessages.js"></script>
+</body>
+</html>
+
+<!--<form id="messageForm">: Создает форму с идентификатором messageForm, которая будет использоваться для добавления новых сообщений.
+<input> и <textarea>: Поля для ввода заголовка и текста сообщения. Оба поля обязательны для заполнения (required).-->

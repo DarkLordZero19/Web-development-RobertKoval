@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #c8cdff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .wrapper {
+            max-width: 550px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+        th, td {
+            border: 1px solid #df5656;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #e6e6e6;
+        }
+        button {
+            background-color: #0077b6;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer; 
+            margin-top: 10px;
+        }
+        label {
+            display: block; 
+            text-align: center; 
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #df5656;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form name="registration" id="registration" onsubmit="return handleSubmit(event)">
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname" id="surname" required>
+
+            <label for="fathername">Имя отца:</label>
+            <input type="text" name="fathername" id="fathername" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" name="password" id="password" required>
+
+            <label for="role">Роль:</label>
+            <select name="role" id="role">
+                <option value="Student" selected>Ученик</option>
+                <option value="Teacher">Преподаватель</option>
+            </select>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <table id="todoTable" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Имя отца</th>
+                    <th>Email</th>
+                    <th>Роль</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Сюда будут добавляться строки -->
+            </tbody>
+        </table>
+
+        <h2>Расписание</h2>
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Предмет</th>
+                    <th>Аудитория</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleBody">
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td>Математика</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>10:15 - 11:15</td>
+                    <td>Физика</td>
+                    <td>202</td>
+                </tr>
+                <tr>
+                    <td>11:30 - 12:30</td>
+                    <td>Химия</td>
+                    <td>303</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 14:00</td>
+                    <td>История</td>
+                    <td>404</td>
+                </tr>
+                <tr>
+                    <td>14:15 - 15:15</td>
+                    <td>География</td>
+                    <td>505</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+
+            // Получаем значения из формы
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const fathername = document.getElementById('fathername').value;
+            const email = document.getElementById('email').value;
+            const role = document.getElementById('role').value;
+
+            // Создаем новую строку в таблице
+            const tableBody = document.getElementById('tableBody');
+            const newRow = tableBody.insertRow();
+            newRow.insertCell(0).textContent = name;
+            newRow.insertCell(1).textContent = surname;
+            newRow.insertCell(2).textContent = fathername;
+            newRow.insertCell(3).textContent = email;
+            newRow.insertCell(4).textContent = role;
+
+            // Показываем таблицу
+            document.getElementById('todoTable').style.display = 'table';
+
+            // Выводим сообщение в консоль
+            console.log(`Пользователь зарегистрирован: ${name} ${surname}, Роль: ${role}`);
+
+            // Сбрасываем форму
+            document.getElementById('registration').reset();
+        }
+    </script>
+</body>
+</html>
+
+<!--HTML-структура:
+Создается форма регистрации с полями для имени, фамилии, имени отца, email, пароля и роли (ученик или преподаватель).
+Таблица для отображения зарегистрированных пользователей и расписание.
+CSS-стили:
+Центрирование элементов на странице с помощью Flexbox.
+Стилизация формы, таблиц и кнопок для улучшения визуального восприятия.
+JavaScript:
+Функция handleSubmit обрабатывает отправку формы:
+Предотвращает перезагрузку страницы.
+Считывает значения из полей.
+Добавляет новую строку в таблицу пользователей.
+Выводит сообщение в консоль о регистрации пользователя.
+Сбрасывает форму для нового ввода.
+Как это работает:
+Пользователь заполняет форму и нажимает "Зарегистрироваться".
+Данные добавляются в таблицу, и информация выводится в консоль, что подтверждает успешную регистрацию.
+-->
