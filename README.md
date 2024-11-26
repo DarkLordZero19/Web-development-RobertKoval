@@ -1,2 +1,2 @@
 # Web-development-RobertKoval
-Web-Development
+Promise - мое шестое задание. Роберт Коваль.
