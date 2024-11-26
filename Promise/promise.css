@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Высота на весь экран */
+    margin: 0;
+    background-color: #f7f7f7; /* Цвет фона */
+}
+
+/* Стили для preloader */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 20px; /* Размер шрифта */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Стили для сообщений */
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px; /* Ширина сообщений */
+    background-color: #fff; /* Цвет фона сообщений */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 18px; /* Размер шрифта для ошибок */
+}
+/* Задает стиль для формы, чтобы элементы внутри отображались в колонку и имели отступ сверху. */
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#title, #body {
+    padding: 10px;
+    margin: 5px 0;
+    width: 300px; /* Ширина полей ввода */
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF; /* Цвет кнопки */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}

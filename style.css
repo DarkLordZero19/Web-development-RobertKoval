@@ -1,0 +1,285 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #005a8e;
+}
+
+.menu-item:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Стили для основного содержимого */
+.main {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 40px 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.article {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.article__content {
+    margin-bottom: 20px;
+}
+
+.article__link {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.article__link:hover {
+    color: #005a8e;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about__list {
+    list-style: none;
+    padding: 0;
+}
+
+.about__list-item {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery__item {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.gallery__item:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.stats__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats__table th,
+.stats__table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.stats__table th {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+.stats__table tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Стили для блока pre */
+pre {
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 15px; 
+    overflow-x: auto; 
+    font-family: 'Courier New', Courier, monospace; 
+    white-space: pre-wrap; 
+}
+
+/* Стили для абзацев */
+p {
+    margin-bottom: 20px; 
+    line-height: 1.6; 
+}
+
+var {
+    font-weight: bold; 
+}
+
+/* Стили для preloader */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.hidden {
+    display: none;
+}
+/* Стили для сообщений */
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+.footer__banner {
+    display: none;
+}
+
+/* Стиль для формы */
+.form-group {
+    margin-bottom: 15px; /*Устанавливает нижний отступ в 15 пикселей, создавая пространство между группами элементов.*/
+}
+
+.main-form {
+    margin-top: 100px; /* Задайте отступ, чтобы форма опустилась ниже header */
+    padding: 40px 20px;
+}
+
+label {
+    display: block; /*Устанавливает метку как блочный элемент, что заставляет метку занимать всю ширину родительского элемента и начинать с новой строки.*/
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="color"],
+input[type="number"], /*Групповой селектор, который применяет стили ко всем указанным элементам ввода и выпадающим спискам.*/
+select {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*Класс для кнопки отправки формы.*/
+.btn {
+    background-color: #0077b6;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /*Изменяет курсор на "указатель" (пальчик), когда пользователь наводит на кнопку, что указывает на то, что элемент кликабельный.*/
+} 
+
+/*Псевдокласс, который применяет стили, когда пользователь наводит курсор на кнопку.*/
+.btn:hover {
+    background-color: #005a8e;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+    position: static;}
+    
+    .main {
+        margin-top: 20px;
+    }
+    
+    .footer__banner {
+        display: block;
+    }
+    
+    .footer__banner-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
